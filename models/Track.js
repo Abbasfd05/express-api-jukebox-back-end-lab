@@ -1,13 +1,14 @@
-const mongoose=require('mongoose');
-const TrackSchema=new mongoose.Schema({
-title: {
-   type:String,
-   required:true,
-},
-artist: {
-    type:String,
-    required:true,
-}
-});
-const Track=mongoose.model('Track', TrackSchema)
-module.exports=Track;
+const mongoose = require('mongoose');
+
+const trackSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  artist: {
+    type: String,
+    required: true,
+  },
+}, { timestamps: true });
+
+module.exports = mongoose.model('Track', trackSchema);

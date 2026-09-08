@@ -24,9 +24,9 @@ app.use(logger('dev'));
 // Routes go here
 app.post('/tracks', TrackCtrl.create);
 app.get('/tracks', TrackCtrl.index);
-app.get('/tracks:id', TrackCtrl.show);
-app.put('/tracks:id', TrackCtrl.update);
-app.delete('/tracks:id', TrackCtrl.delete);
+app.get('/tracks/:id', TrackCtrl.show);
+app.put('/tracks/:id', TrackCtrl.update);
+app.delete('/tracks/:id', TrackCtrl.delete);
 
 app.listen(3000, () => {
   console.log('The express app is ready!');
